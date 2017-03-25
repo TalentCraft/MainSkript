@@ -1,0 +1,2 @@
+on chat:
+    replace all "fuck", "nigger", "n!gg3r", "n!gger", "nigg3r", "nigga", "nigg@", "fuc", "fu(k", "fu(king", "fu(k!ng", "fuck!ng", "fuck3d", "b!tch", "b!tches", "b!tch3s", "$lut", "$hit", "ky$", "k y s", "d!ck", "d!(k", "faggot", "f@gg0t", "fag", "fagg", "shitt", "fuckk", "fu(kk", "fucked", "fucking", "f u c k i n g", "cunt", "f u c k", "f u c k e d", "c u n t", "dick", "d i c k", "kys", "k y s", "asshole", "a s s h o l e", "cum", "c u m", "slut", "s l u t", "bitch", "b i t c h", "shit", "s h i t", "fuk" or "fuk" with "****" in the message
