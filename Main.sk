@@ -1,13 +1,10 @@
 options:
-# Put your server name here 
 	prefix: &9TalentCraft
-	# This is sent to the player, if they do not have the required permission. (Feel free to change)
 	nopermission: &cInsufficient permissions.
 	
 variables:
 	{logincount} = 0 # Default login count (0)
 	
-# This is the event for when a player joins.	
 on join:
 	wait 2 ticks # Waits 2 ticks before broadcasting a message
 	set {_p} to player
