@@ -78,7 +78,24 @@ command /helperpunish [<offline player>]:
 				format slot 3 of player with gold named "&e1 Week Ban" to close then run [make player execute command "/tempban %arg 1% 7d"]
 				format slot 4 of player with diamond named "&ePerm Ban" to close then run [make player execute command "/ban %arg 1%"]
 				format slot 6 of player with redstone named "&eKick" to close then run [make player execute command "/kick %arg 1%"]
-        
+ command /modpunish [<offline player>]:
+	permission: talentcraft.punish.gui.mod
+	permission message: {@nopermission}
+  aliases: /mp
+	trigger:
+		if arg 1 is not set:
+			message "&cUsage: &f/helperpunish <player>"
+		if arg 1 is set:
+			if arg 1 is online:
+				wait 1 tick
+				open chest with 2 rows named "&cPunish" to player 
+				wait 1 tick
+				format slot 0 of player with emerald named "&eRacism Mute" to close then run [make player execute command "/warn %arg 1%"]
+				format slot 1 of player with coal named "&e3 Day Ban" to close then run [make player execute command "/tempban %arg 1% 
+				format slot 2 of player with iron named "&e1 Week Ban" to close then run [make player execute command "/tempban %arg 1% 
+				format slot 3 of player with gold named "&e2 Week Ban" to close then run [make player execute command "/tempban %arg 1% 7d"]
+				format slot 4 of player with diamond named "&ePerm Ban" to close then run [make player execute command "/ban %arg 1%"]
+				format slot 6 of player with redstone named "&eKick" to close then run [make player execute command "/kick %arg 1%"]
         
 				# '1d' means the player will be banned for 1 day. You can substitute '1d' for any amount of time you would like
 # Blocked commands 
