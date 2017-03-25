@@ -1,0 +1,2 @@
+on chat:
+    replace all "hypixel", "cubecraft", "cosmic", ".com", ".net", "play.", "cubecraft" or "cubecraft" with "****" in the message
