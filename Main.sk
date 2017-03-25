@@ -21,11 +21,31 @@ on disconnect:
 command /logincount:
 	permission: talentcraft.logincount 
 	permission message: {@nopermission} # Sends them the message in 'options' called 'nopermission:'
-	# Trigger, is actually where all of the code goes. (I guess it just means, whenever the command "tiggers", or someone executes the command)
 	trigger:
-		# Whenever a player joins, it adds 1 to the login count.
 		message "&fThis server has had &c%{logincount}% logins."
+		
+command /youtube:
+        aliases: /yt
+	permission: talentcraft.youtube
+	permission message: {@nopermission}
+	trigger:
+		message "&f The TalentCraft Youtube channel is: http://youtube.com/fuckyou"
 
+
+command /github:
+        aliases: /yt
+	permission: talentcraft.github
+	permission message: {@nopermission}
+	trigger:
+		message "&f The TalentCraft GItHub organization is: https://github.com/TalentCraft"
+		
+command /website:
+        aliases: /ws
+	permission: talentcraft.website
+	permission message: {@nopermission}
+	trigger:
+		message "&f The TalentCraft website is: http://talentcraft.net"
+		
 command /kits:
 	permission: talentcraft.kits.gui
 	permission message: {@nopermission}
@@ -43,7 +63,7 @@ command /kits:
 command /helperpunish [<offline player>]:
 	permission: talentcraft.punish.gui.helper
 	permission message: {@nopermission}
-  aliases: /hp
+        aliases: /hp
 	trigger:
 		if arg 1 is not set:
 			message "&cUsage: &f/helperpunish <player>"
