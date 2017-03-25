@@ -1,0 +1,111 @@
+options:
+# Put your server name here 
+	prefix: &9TalentCraft
+	# This is sent to the player, if they do not have the required permission. (Feel free to change)
+	nopermission: &cInsufficient permissions.
+	
+variables:
+	{logincount} = 0 # Default login count (0)
+	
+# This is the event for when a player joins.	
+on join:
+	wait 2 ticks # Waits 2 ticks before broadcasting a message
+	set {_p} to player
+	broadcast "&a[+]&7 %{_p}%"
+	wait 2 ticks # Waits 2 more ticks until it finally messages the player that joined.
+	message "Welcome to TalentCraft!" # messages the player this message
+	add 1 to {logincount}
+	
+on disconnect:
+	wait 2 ticks # Waits 2 ticks before broadcasting that the player left
+	set {_p} to player
+	broadcast "&c[-}&7 %{_p}%"
+	
+command /logincount:
+	permission: talentcraft.logincount 
+	permission message: {@nopermission} # Sends them the message in 'options' called 'nopermission:'
+	# Trigger, is actually where all of the code goes. (I guess it just means, whenever the command "tiggers", or someone executes the command)
+	trigger:
+		# Whenever a player joins, it adds 1 to the login count.
+		message "&fThis server has had &c%{logincount}% logins."
+
+command /kits:
+	permission: talentcraft.kits.gui
+	permission message: {@nopermission}
+	trigger:
+		wait 1 tick
+		# Open a chest, with 3 rows. It is named "Kits", with a bluish color 
+		open chest with 3 rows named "&9Kits" to player # 'To player' means, to whoever ran the command :)
+		wait 1 tick # Wait for everything to proccess (recommended)
+		format slot 0 of player with chest named "&eExample Kit" to be unstealable # Unstealable means that the player can not take the chest out 
+		# If you are using essentials, and have the kits setup, you may want to use the line of code below
+		# Basically, what it does is, whenever the player clicks on the chest, it will close the GUI, then make 
+		# The player run the command "/kit (your kit here)"
+		#format slot 1 of player with chest named "&eExample Kit 1" to close then run [make player execute command "/kit (your kit here)"]
+
+command /helperpunish [<offline player>]:
+	permission: talentcraft.punish.gui.helper
+	permission message: {@nopermission}
+  aliases: /hp
+	trigger:
+		if arg 1 is not set:
+			message "&cUsage: &f/helperpunish <player>"
+		if arg 1 is set:
+			if arg 1 is online:
+				wait 1 tick
+				open chest with 2 rows named "&cPunish" to player 
+				wait 1 tick
+				format slot 0 of player with emerald named "&eRacism Mute" to close then run [make player execute command "/warn %arg 1%"]
+				format slot 1 of player with coal named "&e1 Day Ban" to close then run [make player execute command "/tempban %arg 1% 1d"]
+        
+        
+				# '1d' means the player will be banned for 1 day. You can substitute '1d' for any amount of time you would like
+# Blocked commands 
+command /pl:
+	trigger:
+		stop
+		message "{@nopermission}"
+		
+command /plugins:
+	trigger:
+		message "{@nopermission}"
+		stop
+		
+command /ver:
+	trigger:
+		message "{@nopermission}"
+		stop
+		
+command /version:
+	trigger:
+		message "{@nopermission}"
+		stop
+		
+command /icanhasbukkit:
+	trigger:
+		message "{@nopermission}"
+		stop
+		
+command /?:
+	trigger:
+		message "{@nopermission}"
+		stop
+		
+command /bukkit:
+	trigger:
+		message "{@nopermission}"
+		stop
+		
+command /me:
+	trigger:
+		message "{@nopermission}"
+		stop
+		
+command /bukkit:me:
+	trigger:
+		message "{@nopermission}"
+		stop
+		
+		
+		
+		
