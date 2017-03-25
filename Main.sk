@@ -37,7 +37,7 @@ command /github:
 	permission: talentcraft.github
 	permission message: {@nopermission}
 	trigger:
-		message "&f The TalentCraft GItHub organization is: https://github.com/TalentCraft"
+		message "&f The TalentCraft GitHub organization is: https://github.com/TalentCraft"
 		
 command /website:
         aliases: /ws
