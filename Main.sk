@@ -1,6 +1,6 @@
 options:
-	prefix: &9TalentCraft
-	nopermission: &cInsufficient permissions.
+	prefix: &9&lTalentCraft
+	nopermission: &cInsufficient permissions. If this is incorrect, please contact an Admin.
 	
 variables:
 	{logincount} = 0 # Default login count (0)
