@@ -54,6 +54,10 @@ command /helperpunish [<offline player>]:
 				wait 1 tick
 				format slot 0 of player with emerald named "&eRacism Mute" to close then run [make player execute command "/warn %arg 1%"]
 				format slot 1 of player with coal named "&e1 Day Ban" to close then run [make player execute command "/tempban %arg 1% 1d"]
+				format slot 2 of player with iron named "&e3 Day Ban" to close then run [make player execute command "/tempban %arg 1% 3d"]
+				format slot 3 of player with gold named "&e1 Week Ban" to close then run [make player execute command "/tempban %arg 1% 7d"]
+				format slot 4 of player with diamond named "&ePerm Ban" to close then run [make player execute command "/ban %arg 1%"]
+				format slot 6 of player with coal named "&eKick" to close then run [make player execute command "/kick %arg 1%"]
         
         
 				# '1d' means the player will be banned for 1 day. You can substitute '1d' for any amount of time you would like
