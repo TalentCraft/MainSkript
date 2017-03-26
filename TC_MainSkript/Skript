@@ -1,6 +1,6 @@
 options:
 	prefix: &9&lTalentCraft
-	nopermission: &cInsufficient permissions. If this is incorrect, please contact an Admin.
+	nopermission: &cYou do not have permission to use this command! If this is incorrect, contact an admin.
 	
 variables:
 	{logincount} = 0 # Default login count (0)
