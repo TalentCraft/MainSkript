@@ -9,12 +9,12 @@ aliases: /shelp
       send "&6- /TpHelp | List's Warp/Teleportation Commands. "
       send "&8---------------&4&lServer Help&8---------------"
 		else:
-			send "&cYou don't have permission!"
+			send "&cYou do not have permission to use this command! If this is incorrect, contact an admin."
 
 command /facclaim:
 aliases: /fcc
         permission: talentcraft.facclaim
-        permission message: &7[&4&lTalent&c&lCraft&7] &cYou don't have permission to execute this command.
+        permission message: &cYou do not have permission to use this command! If this is incorrect, contact an admin.
         description: Faction Claiming Help
         trigger: 
                 send "&8-----------------------&4&lFac Claiming&8--------------------------"
