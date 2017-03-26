@@ -1,7 +1,7 @@
 command /regeneration:
 		description: This will give the command user the regeneration potion effect.
 		usage: Usage: /regeneration or /regen
-		permission: talentcraft.regeneration
+		permission: talentcraft.effect.regeneration
 		permission message: &cYou do not have permission to use this command! If this is incorrect, contact an admin.
 		executable by: players
 		aliases: /regen
@@ -11,7 +11,7 @@ command /regeneration:
 command /morehealth:
 		description: This will give the command user the absorption potion effect.
 		usage: Usage: /morehealth or /extrahealth
-		permission: talentcraft.morehealth
+		permission: talentcraft.effect.absorption
 		permission message: &cYou do not have permission to use this command! If this is incorrect, contact an admin.
 		executable by: players
 		aliases: /extrahealth
@@ -21,7 +21,7 @@ command /morehealth:
 command /tcspeed:
 		description: This will give the command user the absorption potion effect.
 		usage: Usage: /tcspeed or /tcs
-		permission: talentcraft.speed
+		permission: talentcraft.effect.speed
 		permission message: &cYou do not have permission to use this command! If this is incorrect, contact an admin.
 		executable by: players
 		aliases: /tcs
@@ -30,21 +30,30 @@ command /tcspeed:
 				send: &aSpeed 2 potion effect added!
 command /haste:
 		description: This will give the command user the absorption potion effect.
-		usage: Usage: /morehealth
-		permission: talentcraft.morehealth
+		usage: Usage: /haste
+		permission: talentcraft..effect.haste
 		permission message: &cYou do not have permission to use this command! If this is incorrect, contact an admin.
 		executable by: players
-		aliases: /extrahealth
+		aliases: /haste
 		trigger:
 				/effect <player> minecraft:haste 3 5555
 				send: &aHaste 3 potion effect added!
 command /tcjump:
 		description: This will give the command user the absorption potion effect.
 		usage: Usage: /tcjump or /tcj
-		permission: talentcraft.tcjump
+		permission: talentcraft.effect.jump
 		permission message: &cYou do not have permission to use this command! If this is incorrect, contact an admin.
 		executable by: players
 		aliases: /tcj
 		trigger:
 				/effect <player> minecraft:jump_boost 3 5555
 				send: &aJump Boost 3 potion effect added!
+command /effectclear
+		description: This will clear the user's effects.
+		usage: Usage: /effectclear or /effectc
+		permission: talentcraft.effect.clear
+		permission message: &cYou do not have permission to use this command! If this is incorrect, contact an admin.
+		executable by: players
+		aliases: /effectc
+		trigger:
+				/effect <player> clear
