@@ -16,3 +16,12 @@ command /aunbusy:
 		aliases: /available
 		trigger:
 				/vanish
+command /tcvanish:
+		description: Gives the player full invisibility.
+		usage: Usage: /tcvanish or /tcv
+		permission: talentcraft.adminbusy.vanish
+		permission message: &cYou do not have permission to use this command! If this is incorrect, contact an admin.
+		executable by: players
+		aliases: /tcv
+		trigger:
+				/effect <player> minecraft:invisibility 1000000
