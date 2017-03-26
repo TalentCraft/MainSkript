@@ -1,0 +1,32 @@
+command /plains:
+	trigger:
+		make player execute command "/warp plains"
+
+command /desert:
+	trigger:
+		make player execute command "/warp desert"
+
+command /snow:
+	trigger:
+		make player execute command "/warp snow"
+
+command /pvp:
+	trigger:
+		make player execute command "/warp pvp"
+
+command /arena:
+	trigger:
+		make player execute command "/warp arena"
+
+command /shop:
+	trigger:
+		make player execute command "/warp shop"
+
+command /crates:
+	trigger:
+		make player execute command "/warp crates"
+
+command /nether:
+	trigger:
+		make player execute command "/warp nether"
+		
