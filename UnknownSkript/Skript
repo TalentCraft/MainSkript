@@ -1,0 +1,58 @@
+command /serverhelp:
+aliases: /shelp
+	trigger:
+		if player has permission "talentcraft.serverhelp":
+			send "&8---------------&4&lServer Help&8---------------"
+			send "&6- /F Help | List's Faction's Commands. "
+      send "&6- /FacClaim | List's Faction Claim Commands. "
+      send "&6- /EcoHelp | List's Economy Related Commands. "
+      send "&6- /TpHelp | List's Warp/Teleportation Commands. "
+      send "&8---------------&4&lServer Help&8---------------"
+		else:
+			send "&cYou don't have permission!"
+
+command /facclaim:
+aliases: /fcc
+        permission: talentcraft.facclaim
+        permission message: &7[&4&lTalent&c&lCraft&7] &cYou don't have permission to execute this command.
+        description: Faction Claiming Help
+        trigger: 
+                send "&8-----------------------&4&lFac Claiming&8--------------------------"
+			          send "&6- /f Map| &eShow's Surrounding Claims. "
+                send "&6- /f Claim | &eClaims land that your currently land. "
+                send "&6- /f Claim (Faction) (Radius) | &eClaim's Land in a given radius. "
+                send "&6- /f autoclaim | &eToggles Automatic claiming, as you walk. "
+                send "&6- /f unclaim | &eUnclaim's land that your currently in. "
+                semd "&6- /f unclaimall | &eUnclaims all of the faction's land.
+                send "&8-----------------------&4&lFac Claiming&8-------------------------"
+        
+command /ecohelp 
+aliases: /eh
+        permission: talentcraft.ecohelp
+        permission message: &7[&4&lTalent&c&lCraft&7] &cYou don't have permission to execute this command.
+        description: Eco Help
+        trigger:
+                send "&8------------------------&4&lEco Help&8---------------------------"
+			          send "&6- /bal| &eDisplays your current balance. "
+                send "&6- /pay <player> <amount> | Pay's a player a given amount of money "
+                send "&6- /baltop | &eList's the top richest people. "
+                send "&6- More Commands | &eComming Soon. "
+                send "&8------------------------&4&lEco Help&8----------------------------"
+                
+       
+command /tphelp:
+aliases: /tph
+        permission: talentcraft.tphelp
+        permission message: &7[&4&lTalent&c&lCraft&7] &cYou don't have permission to execute this command.
+        description: Teleportation Help
+        trigger:
+                send "&8------------------------&4&lTeleportation Help&8---------------------------"
+			          send "&6- /tpa <player> | &eSends a Teleportation Request to the Given Player. "
+                send "&6- /tpaccept | &eAccepts a Teleportation Request from a Given Player. "
+                send "&6- /tpdeny | &eDenies a Teleportation Request from a Given Player. "
+                send "&6- /warps | &eList's Warps."
+                send "&6- /warp (Warp Name) | &eWarp's to a Given Destination. "
+                send "&8------------------------&4&lTeleportation Help&8----------------------------"
+               
+
+				
