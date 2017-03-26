@@ -1,0 +1,18 @@
+command /abusy:
+		description: Announces to the server that the user is busy.
+		usage: Usage: /abusy or /adnd
+		permission: talentcraft.adminbusy
+		permission message: &cYou do not have permission to use this command! If this is incorrect, contact an admin.
+		executable by: players
+		aliases: /adnd
+		trigger:
+				/vanish
+command /aunbusy:
+		description: Announces to the server that the user is now available.
+		usage: Usage: /aunbusy or /available
+		permission: talentcraft.adminbusy.available
+		permission message: &cYou do not have permission to use this command! If this is incorrect, contact an admin.
+		executable by: players
+		aliases: /available
+		trigger:
+				/vanish
